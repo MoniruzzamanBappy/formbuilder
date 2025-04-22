@@ -40,7 +40,6 @@ export default function Fieldset({ fieldset }) {
         }
       }
 
-      console.log("Moving field with position:", targetPosition);
       moveField(
         data.sourceFieldsetId,
         fieldset.id,

@@ -13,14 +13,11 @@ export default function FormBuilder() {
 
   // Handle dropping a field from the palette or moving a field/fieldset
   const handleFormCanvasDrop = (data) => {
-    console.log("FormBuilder received drop", data);
-
     // For drops on the canvas (not on a specific fieldset)
     if (data.type === "palette-item" && data.fieldType) {
       // ONLY create a new fieldset if there's already at least one fieldset
       // The first fieldset is handled by the FormCanvas component
       if (state.fieldsets.length > 0) {
-        console.log("Creating subsequent fieldset in FormBuilder");
         const fieldsetId = addFieldset();
         addField(fieldsetId, data.fieldType);
       }
@@ -33,11 +30,6 @@ export default function FormBuilder() {
     ) {
       // Only move if there's a specific target fieldset
       if (data.targetFieldsetId) {
-        console.log("Moving field between fieldsets", {
-          from: data.sourceFieldsetId,
-          to: data.targetFieldsetId,
-          fieldId: data.fieldId,
-        });
         moveField(data.sourceFieldsetId, data.targetFieldsetId, data.fieldId);
       }
     }
@@ -49,10 +41,6 @@ export default function FormBuilder() {
 
       // Only reorder if we have a valid position
       if (targetPosition !== undefined && !isNaN(targetPosition)) {
-        console.log("Reordering fieldset", {
-          fieldsetId: data.fieldsetId,
-          position: targetPosition,
-        });
         moveFieldset(data.fieldsetId, targetPosition);
       }
     }

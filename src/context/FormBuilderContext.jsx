@@ -322,7 +322,6 @@ export function FormBuilderProvider({ children }) {
           throw new Error("Invalid response: missing your_respons");
         }
       } catch (err) {
-        console.error("Load error", err);
         toast({
           title: "Error",
           description: err.message || "Unexpected error loading form.",
@@ -504,7 +503,6 @@ export function FormBuilderProvider({ children }) {
         });
       }
     } catch (err) {
-      console.error("Save error", err);
       toast({
         title: "Error",
         description: err.message || "Unexpected error saving form.",

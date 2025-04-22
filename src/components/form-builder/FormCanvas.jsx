@@ -14,12 +14,6 @@ export default function FormCanvas({ onDrop }) {
     const isPaletteItem = data.type === "palette-item" && data.fieldType;
 
     if (isPaletteItem) {
-      console.log("FormCanvas received drop", {
-        isFirstFieldset,
-        type: data.type,
-        fieldType: data.fieldType,
-      });
-
       if (isFirstFieldset) {
         // For the very first fieldset, handle it in the Canvas component
         const fieldsetId = addFieldset();
