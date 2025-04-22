@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Form Builder
 
-## Getting Started
+A web‑based, drag‑and‑drop form builder application built with React, Wouter, React Query, React DnD, Shadcn‑UI & Tailwind CSS. Visually design custom forms by adding, arranging, and configuring fields and fieldsets, then save or export your form schema via a REST API.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Field Palette**  
+  A sidebar of draggable “palette” items (Text, Number, Dropdown, Radio, Checkbox, Date, Label, Textarea).  
+- **Drag & Drop**  
+  • Drop palette items onto the canvas to auto‑create a new fieldset or add to an existing one  
+  • Reorder fields within a fieldset, move fields between fieldsets  
+  • Reorder entire fieldsets  
+- **Properties Panel**  
+  Click any field or fieldset to edit its properties (name, label, options for multi‑choice fields, etc.)  
+- **Duplicate & Delete**  
+  Quickly duplicate or delete individual fields  
+- **Save & Draft**  
+  • Save your form (POST to your API endpoint) or save as draft  
+  • “Last saved” timestamp in the header  
+  • Toast notifications for success/error via Sonner  
+- **Load Existing Form**  
+  On load, fetch your saved form schema (GET from your API) and hydrate the canvas  
+- **Responsive Layout**  
+  Works across desktop and mobile viewports  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Framework & Rendering**: React + Wouter  
+- **Data Fetching**: @tanstack/react-query  
+- **Drag & Drop**: react-dnd + HTML5 backend  
+- **UI Library**: Shadcn‑UI primitives (Toast, Tooltip, Buttons, Inputs, Selects)  
+- **Icons**: Lucide‑React  
+- **Styling**: Tailwind CSS  
+- **State Management**: React Context + useReducer  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Add Fields**
+Drag a field type from the Custom Field sidebar onto the white canvas.
 
-## Deploy on Vercel
+2. **Reorder / Move**
+• Drag the handle to reorder within a fieldset
+• Drop between fieldsets or onto the canvas to create/move fields & fieldsets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Edit Properties**
+Select a field or fieldset to edit its name, label, and––for multi‑choice fields––its options.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Duplicate / Delete**
+Use the duplicate (copy) or trash icons on each field.
+
+5. **Save / Draft**
+Click Save Form or Draft in the footer. A toast will confirm success or error.
+
+6. **Load Existing**
+On page load, any previously saved form (via your API) will automatically load into the canvas.
+
+## ✍️ Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/MoniruzzamanBappy/formbuilder.git
+   cd formbuilder
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
