@@ -29,7 +29,7 @@ A web‑based, drag‑and‑drop form builder application built with React, Wout
 
 ## 🛠 Tech Stack
 
-- **Framework & Rendering**: React + Wouter  
+- **Framework & Rendering**: React + Next.js  
 - **Data Fetching**: @tanstack/react-query  
 - **Drag & Drop**: react-dnd + HTML5 backend  
 - **UI Library**: Shadcn‑UI primitives (Toast, Tooltip, Buttons, Inputs, Selects)  
